@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>New York City Waste</title>
+  <title>Per Capita Refuse</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="landing.html">New York City Waste</a>
+      <a class="navbar-brand" href="index.html">New York City Waste</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots <span class="caret"></span></a>
@@ -40,21 +40,19 @@
   <div class="row">
     <div class="col-md-6 col-md-12">
       <div class="row">
-        <h1 class="description-header">New York City Waste Analysis</h1>
+        <h1 class="description-header">Per Capita Refuse</h1>
         <hr> 
-        <p> <img class="description-image" src="Visualizations/NYC Total Refuse, Paper and MGP.png"></p>
-        <p class="description-content"> In this analysis, we examined trends in population, total and per capita refuse, and recycling to determine the state of waste production in
-          NYC for the years 1992-2019. We sourced <a href=https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5> refuse</a>, 
-          <a href=https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5> recycling</a>, and 
-          <a href=https://data.cityofnewyork.us/City-Government/New-York-City-Population-By-Community-Districts/xi7c-iiu2> population</a> 
-          data from the NYC Open Data portal and census population data for <a href=https://www.census.gov/data/tables/time-series/demo/popest/intercensal-1990-2000-state-and-county-totals.html> 1990-2000</a>, 
-          <a href=https://www.census.gov/data/tables/time-series/demo/popest/intercensal-2000-2010-counties.html> 2000-2010</a>, 
-          and <a href=https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html> 2010-2018</a>. 
-          Variables considered include tons of trash (refuse), paper, and metal, glass and plastic recycling
-          collected from NYC residences and institutions serviced by the NYC Department of Sanitation. We did not include any 
-          organics refuse information as it was severely incomplete in the NYC archives. We found that both total and per capita trash exhibited an overall decrease between 1992 and 2018. 
-          Recycling of paper decreased slightly and recycling of metal, glass and plastic increased slightly between 2005 and 2019 as a percentage of total waste produced. 
+        <p class="description-content"> In order to control for changes in population, the bulk of our analysis considers per-capita refuse production in tons per person per year. 
+          However, obtaining population estimates with which to compute per-capita refuse production was not straightforward. The only data available were decennial census measurements of community-district level population, as well as annual intercensal estimates of borough population.
+          To compute per-capita refuse production on the community-district level, we used scaled borough-level intercensal estimates to match our community-district estimate totals in census years. 
+          Then, we made estimates of community-district level population in between census years by assuming linear rates of change between census measurements. Finally, we adjusted our linear estimates by controlling to the re-scaled borough-level intercensal data. Below, we include our linear (yellow) and final controlled (pink) estimates over time for two community districts. 
+          For a more detailed discussion of our methods, visit <a href=https://github.com/tedi529/NewYorkWaste/blob/master/Population_Estimate_Analysis/Population%20Estimates.ipynb> github</a>. 
         </p>
+        <p> <img class="mainviz-image2" src="Visualizations/Population_Estimate_Example.png"></p>
+        <p class="description-content"> During the observed years of 1992-2018, we see that per capita refuse declined in all five boroughs. We observe an increase in 
+          per capita refuse in all five boroughs during the years 2000 through 2003. These spikes in deviation do not negate our findings of an overall decrease throughout the time period examined.
+        </p>
+        <p> <img class="mainviz-image2" src="Visualizations/NYC Per Capita Refuse Production.png"></p>
       </div>  
     </div>
     <div class="col-md-6 col-md-12">

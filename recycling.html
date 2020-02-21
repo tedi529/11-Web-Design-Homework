@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Per Capita Borough Refuse </title>
+  <title>Recycling</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="landing.html">New York City Waste</a>
+      <a class="navbar-brand" href="index.html">New York City Waste</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots <span class="caret"></span></a>
@@ -40,13 +40,13 @@
   <div class="row">
     <div class="col-md-6 col-md-12">
       <div class="row">
-        <h1 class="description-header">Per Capita Refuse by Borough</h1>
+        <h1 class="description-header">Recycling</h1>
         <hr> 
-        <p> <img class="mainviz-image3" src="Visualizations/BoroughCapitaRegressions.png"></p>
-        <p class="description-content"> By looking at the per capita NYC waste dataset, we were able to observe trends in each of the five NYC boroughs.
-          As seen above, the borough level refuse trend mirrored the city-wise refuse trend, with slight differences in per capita refuse output among boroughs.  
-          Running regressions at the borough level allowed us to show the strong downward trend in trash production over time. For further details and regression values,
-          visit <a href=https://github.com/tedi529/NewYorkWaste/blob/master/Analysis_Notebooks/Trash%20Output%20Time%20Borough.ipynb> github</a>.
+        <p> <img class="mainviz-image4" src="Visualizations/NYC Ratio of Refuse, Paper, and MGP.png"></p>
+        <p class="description-content"> We used recycling of paper and metal, glass, plastic information for the years 2005-2019, as this was the most 
+          complete set of information for all five NYC boroughs and was comprised of 10,620 observations for paper recycling and 10,620 observations for metal, glass, and plastic recycling. 
+          The proportion of waste comprised of refuse, paper, and metal, glass, plastic respectively changed only slightly over the decade for which data were available. For further details,
+          visit <a href=https://github.com/tedi529/NewYorkWaste/blob/master/Analysis_Notebooks/Recycling%20Analysis.ipynb> github</a>.
         </p>
       </div>  
     </div>

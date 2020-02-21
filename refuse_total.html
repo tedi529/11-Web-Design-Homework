@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Per Capita Refuse</title>
+  <title>Total Refuse</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="landing.html">New York City Waste</a>
+      <a class="navbar-brand" href="index.html">New York City Waste</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots <span class="caret"></span></a>
@@ -40,19 +40,15 @@
   <div class="row">
     <div class="col-md-6 col-md-12">
       <div class="row">
-        <h1 class="description-header">Per Capita Refuse</h1>
+        <h1 class="description-header">Total Refuse</h1>
         <hr> 
-        <p class="description-content"> In order to control for changes in population, the bulk of our analysis considers per-capita refuse production in tons per person per year. 
-          However, obtaining population estimates with which to compute per-capita refuse production was not straightforward. The only data available were decennial census measurements of community-district level population, as well as annual intercensal estimates of borough population.
-          To compute per-capita refuse production on the community-district level, we used scaled borough-level intercensal estimates to match our community-district estimate totals in census years. 
-          Then, we made estimates of community-district level population in between census years by assuming linear rates of change between census measurements. Finally, we adjusted our linear estimates by controlling to the re-scaled borough-level intercensal data. Below, we include our linear (yellow) and final controlled (pink) estimates over time for two community districts. 
-          For a more detailed discussion of our methods, visit <a href=https://github.com/tedi529/NewYorkWaste/blob/master/Population_Estimate_Analysis/Population%20Estimates.ipynb> github</a>. 
+        <p> <img class="mainviz-image" src="Visualizations/NYC Total Refuse Production.png"></p>
+        <p class="description-content"> Above, we show a total overall decrease in trash production in the five boroughs of NYC in the years 1992-2018. 
+          Trash production increased slightly between 2000 and 2003, before exhibiting a consistent downward trend. 
         </p>
-        <p> <img class="mainviz-image2" src="Visualizations/Population_Estimate_Example.png"></p>
-        <p class="description-content"> During the observed years of 1992-2018, we see that per capita refuse declined in all five boroughs. We observe an increase in 
-          per capita refuse in all five boroughs during the years 2000 through 2003. These spikes in deviation do not negate our findings of an overall decrease throughout the time period examined.
+        <p class="description-content"> We used total refuse information for the years 1992 to 2018, as this was the most complete set of information for all five 
+          NYC boroughs and was comprised of 19,824 observations. We looked at the total tons of refuse produced in the whole city to determine the overall trend of waste production during this time period.
         </p>
-        <p> <img class="mainviz-image2" src="Visualizations/NYC Per Capita Refuse Production.png"></p>
       </div>  
     </div>
     <div class="col-md-6 col-md-12">
